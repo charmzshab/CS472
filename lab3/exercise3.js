@@ -39,8 +39,3 @@ function findBooks(keyword) {
     .filter((book) => book.title.toLowerCase().includes(keyword.toLowerCase()))
     .sort((a, b) => a.ID - b.ID);
 }
-
-// --- Example Usage ---
-console.log("Added:", addBook("New Book", "Author X", 1111));
-console.log("Titles:", getTitles());
-console.log("Books with 'road':", findBooks("road"));
