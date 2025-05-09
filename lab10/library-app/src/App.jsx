@@ -7,7 +7,7 @@ const App = () => {
   return (
     <BookProvider>
       <div style={{ padding: "2rem" }}>
-        <h1>📚 Book Library</h1>
+        <h1>Book Library</h1>
         <AddBookForm />
         <EditBookForm />
         <BookList />
