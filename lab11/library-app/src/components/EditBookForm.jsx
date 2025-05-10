@@ -4,6 +4,8 @@ import { useParams, useNavigate } from "react-router-dom";
 
 const EditBookForm = () => {
    const { id } = useParams();
+   console.log(id);
+   
   const navigate = useNavigate();
   const { books, updateBook } = useBooks();
   const [form, setForm] = useState({ title: "", author: "" });
