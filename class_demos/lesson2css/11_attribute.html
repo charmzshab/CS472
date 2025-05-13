@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 2 CSS</title>
+    <style>
+        /* ^,$,* */
+        /*10*/
+        [myAttr] {
+            background: red;
+        }
+
+        /*10*/
+        .myClass {
+            background-color: blue;
+        }
+
+        input[type="date"] {
+            background-color: purple;
+            color: white;
+        }
+
+        [type="date"] {
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div myAttr="true" class="myClass">This is a div</div>
+    <p myAttr="false">This is another div</p>
+    <input type="text">
+    <input type="date">
+
+</body>
+
+</html>

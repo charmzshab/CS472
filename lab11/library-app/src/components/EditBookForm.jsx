@@ -11,7 +11,9 @@ const EditBookForm = () => {
   const [form, setForm] = useState({ title: "", author: "" });
 
   useEffect(() => {
-     const book = books.find((b) => b.id === parseInt(id));
+     const book = books.find((b) => b.id === id);
+     console.log(book);
+     
     if (book) {
       setForm({ title: book.title, author: book.author });
     }
