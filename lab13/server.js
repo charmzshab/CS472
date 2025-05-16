@@ -1,8 +1,8 @@
-// Question2:
+import path from "path";
+import fs from "fs";
+import http from "http";
 
-const http = require("http");
-const fs = require("fs");
-const path = require("path");
+// Question2:
 
 const PORT = 3000;
 
