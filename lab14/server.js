@@ -1,5 +1,10 @@
 import express from "express";
 import path from "path";
+import url from "url";
+
+const __filename = url.fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 //instantiation
 const app = express();
 
@@ -8,14 +13,18 @@ const PORT = app.get("port");
 
 // Route for image
 app.get("/image", (req, res) => {
-  const imagePath = path.join(__dirname, "public", "image.jpg");
+  const imagePath = path.join(__dirname, "public", "dricus.jpeg");
   res.type("image/jpeg"); // or image/png based on the actual file
   res.sendFile(imagePath);
 });
 
 // Route for PDF
 app.get("/pdf", (req, res) => {
-  const pdfPath = path.join(__dirname, "public", "document.pdf");
+  const pdfPath = path.join(
+    __dirname,
+    "public",
+    "Final_Project_Specification.pdf"
+  );
   res.type("application/pdf");
   res.sendFile(pdfPath);
 });

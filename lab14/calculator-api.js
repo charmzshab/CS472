@@ -1,3 +1,5 @@
+import express from "express";
+
 // Write an Express application to provide a calculator API.
 // • There should be an API endpoint for each basic math
 // operation: addition, subtraction, multiplication, division, and modulus.
@@ -13,9 +15,10 @@
 // o POST /addition/ BODY ?a=2&b=3
 // o POST /addition/ BODY {a:2,b:3}
 
-const express = require("express");
 const app = express();
-const port = 3000;
+
+app.set("port", process.env.PORT || 3017);
+const PORT = app.get("port");
 
 app.use(express.json()); // for JSON body
 app.use(express.urlencoded({ extended: true })); // for urlencoded body
@@ -67,6 +70,6 @@ calculatorRouter.all("/modulus/:a?/:b?", (req, res) => {
 
 app.use("/", calculatorRouter);
 
-app.listen(port, () => {
-  console.log(`Calculator API running at http://localhost:${port}`);
+app.listen(PORT, () => {
+  console.log(`Calculator API running at http://localhost:${PORT}`);
 });
